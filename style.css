@@ -11,8 +11,14 @@ body {
 }
 textarea {
     resize: none;
-
     margin-top: 4px;
+    border: 1px solid #ccc; /* 默认边框颜色 */
+    outline: none;         /* 去掉默认的 outline */
+    padding: 10px;
+}
+textarea:focus{
+    border: 1px solid #007BFF; /* 焦点时的边框颜色 */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5)
 }
 @media (prefers-color-scheme: dark) {
     body {
@@ -39,21 +45,23 @@ textarea {
 .translation-container {
     width: 100vw;
     height: 100vh;
-  overflow: hidden;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .input-section {
-    border: 2px solid gainsboro;
-    border-radius: 5px;
-    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
 }
 .output-section {
-    border: 2px solid gainsboro;
-    border-radius: 5px;
-    padding: 8px;
+    margin-left: 10px;
+    border: none;
+    border-radius: 20px;
+    padding: 5px;
 }
+
 #copy-svg {
     position: absolute;
     top: -22px;
